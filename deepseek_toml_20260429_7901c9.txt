@@ -1,0 +1,35 @@
+name = "wasabi-stream-player"
+main = "src/worker.js"
+compatibility_date = "2024-12-18"
+
+# Environment variables
+[vars]
+WASABI_REGION = "us-east-1"
+WASABI_ENDPOINT = "https://s3.wasabisys.com"
+
+# Secrets (set these with wrangler secret put)
+# WASABI_ACCESS_KEY
+# WASABI_SECRET_KEY  
+# WASABI_BUCKET
+# API_TOKEN (optional, for presign endpoints)
+
+# Routes
+routes = [
+    { pattern = "your-domain.com/*", zone_name = "your-domain.com" }
+]
+
+# Optional: Add custom domain
+# [env.production]
+# routes = [
+#     { pattern = "stream.yourdomain.com/*", zone_name = "yourdomain.com" }
+# ]
+
+# Performance optimizations
+[limits]
+cpu_ms = 50
+subrequests = 50
+
+# Analytics
+[observability]
+enabled = true
+head_sampling_rate = 0.1
