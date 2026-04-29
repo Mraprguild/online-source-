@@ -4,7 +4,7 @@ compatibility_date = "2024-12-18"
 
 # Environment variables
 [vars]
-WASABI_REGION = "us-east-1"
+WASABI_REGION = "eu-west-2"
 WASABI_ENDPOINT = "https://s3.wasabisys.com"
 
 # Secrets (set these with wrangler secret put)
@@ -15,7 +15,7 @@ WASABI_ENDPOINT = "https://s3.wasabisys.com"
 
 # Routes
 routes = [
-    { pattern = "your-domain.com/*", zone_name = "your-domain.com" }
+    { pattern = "https://locallhost.com/*", zone_name = "https://locallhost.com/" }
 ]
 
 # Optional: Add custom domain
