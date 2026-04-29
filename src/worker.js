@@ -93,7 +93,7 @@ async function generatePresignedUrl(key, expiresIn = 604800) {
     const accessKey = env.WASABI_ACCESS_KEY;
     const secretKey = env.WASABI_SECRET_KEY;
     const bucket = env.WASABI_BUCKET;
-    const region = env.WASABI_REGION || 'us-east-1';
+    const region = env.WASABI_REGION || 'eu-west-2';
     const endpoint = env.WASABI_ENDPOINT || 'https://s3.wasabisys.com';
     
     if (!accessKey || !secretKey || !bucket) {
@@ -651,7 +651,7 @@ export default {
                 service: 'wasabi-stream-worker',
                 version: '2.0.0',
                 timestamp: new Date().toISOString(),
-                region: env.WASABI_REGION || 'us-east-1'
+                region: env.WASABI_REGION || 'eu-west-2'
             }), {
                 headers: { 'Content-Type': 'application/json', ...CORS_HEADERS }
             });
