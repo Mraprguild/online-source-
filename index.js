@@ -3,10 +3,10 @@
 
 // ============ CONFIGURATION ============
 const WASABI_CONFIG = {
-    accessKey: "YOUR_WASABI_ACCESS_KEY",     // Set via secrets
-    secretKey: "YOUR_WASABI_SECRET_KEY",     // Set via secrets
-    bucket: "your-bucket-name",
-    region: "us-east-1",                     // e.g., us-east-1, eu-central-1
+    accessKey: "PSGJ8NDNJ23T0Y9OY75O",     // Set via secrets
+    secretKey: "qQlJWvlIQJhSqQPz7CIq0IIh1Gn1sXj7DC6lt7mN",     // Set via secrets
+    bucket: "filetopremium",
+    region: "eu-west-2",                     // e.g., us-east-1, eu-central-1
     endpoint: "https://s3.wasabisys.com"     // Standard Wasabi endpoint
 };
 
@@ -45,7 +45,7 @@ async function signRequest(method, url, headers = {}, body = null) {
     
     // Parse URL
     const parsedUrl = new URL(url);
-    const region = WASABI_CONFIG.region || env.WASABI_REGION || 'us-east-1';
+    const region = WASABI_CONFIG.region || env.WASABI_REGION || 'eu-west-2';
     const service = 's3';
     const host = parsedUrl.hostname;
     
